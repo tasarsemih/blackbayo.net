@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Decoy List</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>Decoy Identity List</h1>
+
+<table border="1" cellpadding="7">
+    <tr>
+        <th>Fake Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+    </tr>
+
+    {% for d in decoys %}
+    <tr>
+        <td>{{d.name}}</td>
+        <td>{{d.email}}</td>
+        <td>{{d.phone}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
