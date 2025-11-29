@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exposure Results</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>Exposure Report</h1>
+
+<p><b>Name:</b> {{name}}</p>
+<p><b>Email:</b> {{email}}</p>
+<p><b>Phone:</b> {{phone}}</p>
+
+<h2>Simulated Exposure Details</h2>
+
+<p><b>Potential Leaks Found:</b> {{leak_count}}</p>
+<p><b>Risk Score:</b> {{risk_score}} / 100</p>
+
+<h3>Simulated Sources:</h3>
+<ul>
+    {% for site in found_on %}
+    <li>{{site}}</li>
+    {% endfor %}
+</ul>
+
+<h2>Decoy Data</h2>
+<p>Generated {{decoy_count}} fake identities.</p>
+
+<a href="/decoys">View Decoys</a>
+
+</body>
+</html>
